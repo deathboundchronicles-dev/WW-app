@@ -1,0 +1,17 @@
+After Render deploys, suppose your service URL is:
+
+https://storyteller-d10-aberrant-room-service.onrender.com
+
+Use this as the app's room service endpoint:
+
+wss://storyteller-d10-aberrant-room-service.onrender.com
+
+FAST TEST:
+Table -> Advanced connection -> Room service endpoint -> paste wss:// URL.
+
+MAKE IT THE BUILD DEFAULT:
+In the Aberrant standalone HTML change:
+<meta content="" name="storyteller-room-service"/>
+
+to:
+<meta content="wss://storyteller-d10-aberrant-room-service.onrender.com" name="storyteller-room-service"/>
