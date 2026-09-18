@@ -1,17 +1,13 @@
-After Render deploys, suppose your service URL is:
+Storyteller d10 Aberrant v0.7.15-alpha Remote Table View
 
-https://storyteller-d10-aberrant-room-service.onrender.com
+Hosted room endpoint:
+wss://ww-app-1tke.onrender.com
 
-Use this as the app's room service endpoint:
+IMPORTANT: Deploy this updated server before using Remote Table View.
+The previous server does not understand the additive join_viewer message.
 
-wss://storyteller-d10-aberrant-room-service.onrender.com
-
-FAST TEST:
-Table -> Advanced connection -> Room service endpoint -> paste wss:// URL.
-
-MAKE IT THE BUILD DEFAULT:
-In the Aberrant standalone HTML change:
-<meta content="" name="storyteller-room-service"/>
-
-to:
-<meta content="wss://storyteller-d10-aberrant-room-service.onrender.com" name="storyteller-room-service"/>
+Remote Table behavior:
+- GM starts/joins the room normally.
+- In the app, use Open Remote Table View or Copy Viewer Link.
+- Viewer URLs use ?broadcast=ROOMCODE.
+- A Remote Table client is read-only and is not counted as a player.
