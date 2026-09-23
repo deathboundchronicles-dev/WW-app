@@ -1,0 +1,9 @@
+{
+  "name": "aberrant-campaign-hub",
+  "version": "0.7.20-alpha",
+  "private": true,
+  "main": "aberrant-campaign-service-v0.7.20-alpha.js",
+  "scripts": {"start":"node aberrant-campaign-service-v0.7.20-alpha.js"},
+  "engines": {"node": ">=18"},
+  "dependencies": {"pg":"^8.16.3"}
+}
