@@ -3,7 +3,7 @@
 const http=require('http'),fs=require('fs'),path=require('path'),crypto=require('crypto');
 let PgPool=null;try{PgPool=require('pg').Pool}catch{}
 const PORT=Number(process.env.PORT||8791),HOST=process.env.HOST||'0.0.0.0';
-const CLIENT_FILE=process.env.ABERRANT_CLIENT_FILE||path.join(__dirname,'..','Storyteller_d10_Aberrant_v0.7.30-alpha_mobile-table-redesign.html');
+const CLIENT_FILE=process.env.ABERRANT_CLIENT_FILE||path.join(__dirname,'..','Storyteller_d10_Aberrant_v0.7.31-alpha_campaign-tab-crash-repair.html');
 const MAX_BODY=Number(process.env.MAX_BODY||35*1024*1024);
 const CLIENT_LAYOUT_HOTFIX='<style id="aberrantTableLayoutHotfixV0720">@media(min-width:821px){#view-table[data-table-mode="authoring"].table-authoring-rail-collapsed #abParityScenePanel{box-sizing:border-box;min-width:0;width:56px;max-width:56px;overflow:hidden;padding:6px 4px;align-self:start}#view-table[data-table-mode="authoring"].table-authoring-rail-collapsed #abParityScenePanel>*{display:none!important}#view-table[data-table-mode="authoring"].table-authoring-rail-collapsed #abParityScenePanel::before{content:"Campaign Continuity";display:block;margin:0 auto;writing-mode:vertical-rl;transform:rotate(180deg);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ww-text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-height:132px}}#view-table .table-board-stack,#view-table .table-board-card,#view-table .vtt-scroll{min-width:0;max-width:100%;box-sizing:border-box}#view-table .table-board-card{overflow:hidden}</style>';
 const mem={campaigns:new Map(),members:new Map()};
